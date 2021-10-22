@@ -24,6 +24,7 @@ function resetInterval() {
 }
 
 function moveCarousel() {
+  //last image
   if (index > imagesCollection.length - 1) {
     index = 0;
   } else if (index < 0) {
