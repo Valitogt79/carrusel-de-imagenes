@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caruouel */
+.carousel {
+  width: 800px;
+  height: 650px;
+  overflow: hidden;
+}
+
+/* imagenes */
+.images {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+
+/* controlres */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.btn {
+  bottom: none;
+  background-color: goldenrod;
+  flex-basis: 33%;
+  cursor: pointer;
+}
