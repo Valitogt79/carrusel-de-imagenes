@@ -4,15 +4,23 @@ const imagesCollection = images.querySelectorAll(".images");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
+prevBtn.addEventListener("click", prevSlide);
+nextBtn.addEventListener("click", nextSlide);
+
 // Utilitiy vars
 let index = 0;
 
 // Set interval
-let interval = setInterval(startInteval, 2000);
+let interval = setInterval(startInteval, 3000);
 
 function startInteval() {
   index++;
   moveCarousel();
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  interval = setInterval(startInteval, 3000);
 }
 
 function moveCarousel() {
@@ -27,10 +35,12 @@ function moveCarousel() {
 // navs buttons
 function prevSlide() {
   index--;
+  resetInterval();
   moveCarousel();
 }
 
 function nextSlide() {
   index++;
+  resetInterval();
   moveCarousel();
 }
